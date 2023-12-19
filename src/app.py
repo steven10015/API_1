@@ -37,7 +37,7 @@ try:
     df_tracks = pd.DataFrame(tracks_data)
     df_sorted = df_tracks.sort_values(by='Popularity') #sort the songs by increasing popularity 
 
-    #print(df_sorted.tail(3)) # display the resulting top 3.
+    #print(df_sorted.tail(3)) # display the resulting top 3
 
     # Plotting
     plt.figure(figsize=(10, 6))
