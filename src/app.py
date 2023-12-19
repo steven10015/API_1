@@ -1,15 +1,37 @@
 import os
-from sqlalchemy import create_engine
-import pandas as pd
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
 from dotenv import load_dotenv
 
-# load the .env file variables
+# Load the .env file variables
 load_dotenv()
 
-# 1) Connect to the database here using the SQLAlchemy's create_engine function
+# Retrieve CLIENT_ID and CLIENT_SECRET from environment variables
+client_id = os.environ.get("CLIENT_ID")
+client_secret = os.environ.get("CLIENT_SECRET")
 
-# 2) Execute the SQL sentences to create your tables using the SQLAlchemy's execute function
+if not client_id or not client_secret:
+    raise Exception("CLIENT_ID and CLIENT_SECRET must be set in the environment variables")
 
-# 3) Execute the SQL sentences to insert your data using the SQLAlchemy's execute function
+# Spotify Client Credentials Authentication
+credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
+spotify = spotipy.Spotify(client_credentials_manager=credentials_manager)
 
-# 4) Use pandas to print one of the tables as dataframes using read_sql function
+# Artist URI
+artist_id = '58zz0VTpGNHn7MGTlW2cxQ'
+
+# Fetching the top tracks of the artist
+try:
+    results = spotify.artist_top_tracks(artist_id)
+
+    # Printing the top 10 tracks
+    for track in results['tracks'][:10]:
+        print('Track   :', track['name'])
+        print('Audio   :', track['preview_url'])
+        print()
+except spotipy.exceptions.SpotifyException as e:
+    print("An error occurred:", e)
+
+
+
+
