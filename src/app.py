@@ -1,4 +1,6 @@
 import os
+import pandas as pd
+import matplotlib.pyplot as plt
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from dotenv import load_dotenv
@@ -24,16 +26,27 @@ artist_id = '58zz0VTpGNHn7MGTlW2cxQ'
 try:
     results = spotify.artist_top_tracks(artist_id)
 
-    # Printing the top 10 tracks with their popularity and duration
-    for track in results['tracks'][:10]:
-        duration_min = track['duration_ms'] / 60000  # Convert milliseconds to minutes
-        print('Track   :', track['name'])
-        print('Popularity:', track['popularity'])
-        print('Duration:', "{:.2f} minutes".format(duration_min))
-        print()
+    # Extract track data - Transform to Pandas DataFrame
+    tracks_data = [{
+        'Name': track['name'],
+        'Popularity': track['popularity'],
+        'Duration (Minutes)': track['duration_ms'] / 60000,  # Convert milliseconds to minutes
+    } for track in results['tracks']]
+
+    # Create a DataFrame and sort by popularity
+    df_tracks = pd.DataFrame(tracks_data)
+    df_sorted = df_tracks.sort_values(by='Popularity') #sort the songs by increasing popularity 
+
+    #print(df_sorted.tail(3)) # display the resulting top 3.
+
+    # Plotting
+    plt.figure(figsize=(10, 6))
+    plt.scatter(df_tracks['Duration (Minutes)'], df_tracks['Popularity'])
+    plt.title('Track Duration vs. Popularity')
+    plt.xlabel('Duration (Minutes)')
+    plt.ylabel('Popularity')
+    plt.grid(True)
+    plt.show()
+
 except spotipy.exceptions.SpotifyException as e:
     print("An error occurred:", e)
-
-
-
-
