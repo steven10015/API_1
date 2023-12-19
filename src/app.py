@@ -24,10 +24,12 @@ artist_id = '58zz0VTpGNHn7MGTlW2cxQ'
 try:
     results = spotify.artist_top_tracks(artist_id)
 
-    # Printing the top 10 tracks
+    # Printing the top 10 tracks with their popularity and duration
     for track in results['tracks'][:10]:
+        duration_min = track['duration_ms'] / 60000  # Convert milliseconds to minutes
         print('Track   :', track['name'])
-        print('Audio   :', track['preview_url'])
+        print('Popularity:', track['popularity'])
+        print('Duration:', "{:.2f} minutes".format(duration_min))
         print()
 except spotipy.exceptions.SpotifyException as e:
     print("An error occurred:", e)
