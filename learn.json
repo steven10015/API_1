@@ -5,7 +5,7 @@
 	"solution": "https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/blob/main/src/solution.md",
 	"status": "published",
 	"translations": ["us"],
-	"technologies": ["http", "api"],
+	"technologies": ["http", "api", "python", "spotipy", "python-dotenv", "pandas", "machine learning", "data science"],
 	"difficulty": "beginner",
 	"syntax": "python",
 	"duration" : 2,
