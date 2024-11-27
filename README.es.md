@@ -8,6 +8,7 @@
 - Crea un marco de datos de Python Pandas para facilitar la manipulación de los datos.
 - Guarda los datos en una base de datos SQL.
 
+<onlyfor saas="false" withBanner="false"
 ## 🌱 Cómo iniciar este proyecto
 
 Sigue las siguientes instrucciones:
@@ -15,6 +16,7 @@ Sigue las siguientes instrucciones:
 1. Crear un nuevo repositorio haciendo fork en el [proyecto de Git](https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial) o [haciendo clic aquí](https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/fork).
 2. Abre el repositorio creado recientemente en Codespace usando la [extensión del botón de Codespace](https://docs.github.com/es/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
 3. Una vez que el VSCode del Codespace haya terminado de abrirse, comienza tu proyecto siguiendo las instrucciones a continuación.
+</onlyfor>
 
 ## 🚛 Cómo entregar este proyecto
 
