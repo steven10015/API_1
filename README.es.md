@@ -8,7 +8,8 @@
 - Crea un marco de datos de Python Pandas para facilitar la manipulación de los datos.
 - Guarda los datos en una base de datos SQL.
 
-<onlyfor saas="false" withBanner="false"
+<onlyfor saas="false" withBanner="false">
+  
 ## 🌱 Cómo iniciar este proyecto
 
 Sigue las siguientes instrucciones:
