@@ -7,8 +7,8 @@
 + Retrieve and download data from the Spotify API.
 + Create a Python Pandas dataframe for easier manipulation of the data.
 + Save the data to an SQL database.
- 
-<onlyfor saas="false" withBanner="false"
+  
+ <onlyfor saas="false" withBanner="false">
 
 ## 🌱 How to start this project
 
