@@ -8,6 +8,7 @@
 	"technologies": ["http", "api", "python", "spotipy", "python-dotenv", "pandas", "matplotlib", "machine learning", "data science"],
 	"difficulty": "beginner",
 	"syntax": "python",
+	"template_url": "self",
 	"duration" : 2,
     "projectType": "project",
 	"autoPlay": false,
