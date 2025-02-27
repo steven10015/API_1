@@ -1,6 +1,9 @@
 {
 	"slug" : "interacting-with-api-python-project-tutorial",
-	"title" : "Interacting with an API using Python",
+	"title" : {
+		"us":"Interacting with an API using Python",
+		"es":"Interactuar con una API utilizando Python"
+	},
 	"preview": "https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/blob/main/preview.png?raw=true",
 	"solution": "https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/blob/main/src/solution.md",
 	"status": "published",
@@ -12,5 +15,11 @@
 	"duration" : 2,
     "projectType": "project",
 	"autoPlay": false,
-	"description" : "Connect with any API, retrieve the data and save it into a python pandas dataframe for easier manipulation and into a SQL database."
+	"description" : {
+		"us":"Connect to any API, fetch the data, and store it in a Python Pandas dataframe for easy manipulation and analysis. Then save the structured data into an SQL database. This project helps you practice API interaction, data processing, and database management using Python.",
+		"es":"Conéctate a cualquier API, obtiene los datos y guárdalos en un dataframe de Python Pandas para facilitar su manipulación y análisis. Luego, guarda los datos estructurados en una base de datos SQL. Este proyecto te ayuda a practicar la interacción con APIs, el procesamiento de datos y la gestión de bases de datos usando Python."
+	},
+	"telemetry": {
+	    	"batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id=404"
+	  }
 }
